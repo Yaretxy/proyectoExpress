@@ -3,6 +3,7 @@ const adopciones = require('../servicios/servcios_adopcion');
 const ruta = express.Router();
 const servicios = new adopciones();
 
+
 ruta.get('/',async function(req, res, next){
     try {
         res.json(await servicios.obtener(req.query));
