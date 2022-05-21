@@ -8,7 +8,11 @@ class adopciones{
     }
 
     async obtener(){
-        const result= await db.query(`SELECT * FROM animales`);
+        const result= await db.query(`SELECT animales.nombre,
+                                      animales.edad, 
+                                      vacunas.vacuna
+                                      FROM animales
+                                      INNER JOIN vacunas on animales.id_vacuna= vacunas.id`);
         return result;
     }
 
