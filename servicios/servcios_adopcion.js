@@ -16,6 +16,8 @@ class adopciones{
         return result;
     }
 
+    
+
     async agregar(data) {
         console.log(data);
         const result= await db.query(
