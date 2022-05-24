@@ -8,7 +8,7 @@ class adopciones{
     }
 
     async obtener(){
-        const result= await db.query(`SELECT animales.nombre,
+        const result= await db.query(`SELECT animales.id,animales.nombre,
                                       animales.edad, 
                                       vacunas.vacuna
                                       FROM animales
@@ -19,8 +19,8 @@ class adopciones{
     async agregar(data) {
         console.log(data);
         const result= await db.query(
-          `INSERT INTO animales (nombre,edad) VALUES
-          ( '${data.nombre}',${data.edad})`);
+          `INSERT INTO animales (nombre,edad,id_vacuna) VALUES
+          ( '${data.nombre}',${data.edad},${data.id_vacuna})`);
         return result;
       }
 
