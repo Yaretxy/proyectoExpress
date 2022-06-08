@@ -2,7 +2,7 @@ const config={
   db:{
       host:"localhost",
       user:"root",
-      database:"prueba_adopcion",
+      database:"adopcion",
 
   }
 };
