@@ -26,6 +26,7 @@ ruta.post('/',async function(req,res,next){
 
 });
 
+
 //trer un registro
 ruta.get('/:id',async function(req,res,next){
     try {
